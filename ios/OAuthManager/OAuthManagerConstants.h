@@ -11,12 +11,12 @@
 
 #import "DCTAuthAccount.h"
 
-enum _runtime_error
+typedef NS_ENUM(NSInteger, runtime_error_t)
 {
     E_UNKNOWN_PROVIDER = 0,
     E_PROVIDER_NOT_CONFIGURED = 1,
     E_ACCOUNT_NOT_AUTHORIZED = 2
-} runtime_error_t;
+};
 
 #define QUICK_ERROR(error_code, error_description) [NSError errorWithDomain:NSStringFromClass([self class]) code:error_code userInfo:[NSDictionary dictionaryWithObject:error_description forKey:NSLocalizedDescriptionKey]];
 

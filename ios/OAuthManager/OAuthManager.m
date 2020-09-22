@@ -67,6 +67,11 @@ RCT_EXPORT_MODULE(OAuthManager);
     return self;
 }
 
++ (BOOL)requiresMainQueueSetup
+{
+  return NO;
+}
+
 - (void) dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
